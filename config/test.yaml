@@ -1,0 +1,34 @@
+healthcheck:
+  workingText: WORKING
+
+redis:
+  addrs: "localhost:5000"
+  host: localhost
+  port: 6379
+  db: 0
+
+faultyRedis:
+  host: "localhost"
+  port: 12345
+  db: 0
+
+api:
+  maxReturnedMembers: 2000
+
+jaeger:
+  disabled: false
+  samplingProbability: 1.0
+
+newrelic:
+  key: ""
+
+worker:
+  expirationCheckInterval: 1s
+  expirationLimitPerRun: 100
+
+extensions:
+  dogstatsd:
+    host: localhost:8125
+    prefix: podium.
+    tags_prefix: ""
+    rate: 1
